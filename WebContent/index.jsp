@@ -33,9 +33,21 @@ function responseJson(){
 		}
 	});
 }
+
+var i = 0;
+
+$(function() {
+	$("#content").html(1000);
+	setInterval(showNum, 1000);
+});
+function showNum () {
+	i = i + Math.floor(10);
+	$("#content").html(i);
+}
 </script>
 </head>
 <body>
+	<div id="content"></div>
 	<h4>请求json，响应json</h4>
 	<button onclick="requestJson()">requestJson</button>
 	<hr>
